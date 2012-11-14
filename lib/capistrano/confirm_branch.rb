@@ -10,11 +10,15 @@ Capistrano::Configuration.instance(:must_exist).load do
       deployed_branch       = nil
       pending_deploy_branch = fetch(:branch)
 
-      run %{cat #{shared_path}/current_branch} do |ch, stream, out|
+      branch_file = "#{shared_path}/current_branch"
+
+      run %{touch #{branch_file} && cat #{branch_file}} do |ch, stream, out|
         deployed_branch = out.strip
       end
 
       if deployed_branch != pending_deploy_branch
+        deployed_branch ||= "unknown"
+
         Capistrano::CLI.ui.say %{
           ============ Changing deployed branches ============
           Deployed Branch:       #{deployed_branch}

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capistrano_confirm_branch (0.0.1)
+    capistrano_confirm_branch (0.0.2)
       capistrano
 
 GEM
