@@ -1,6 +1,6 @@
 # Capistrano Confirm Branch
 
-Requires confirmation before switching deployed branches to capistrano.
+Requires confirmation before switching deployed branches using capistrano.
 
 ![Confirm Deploy](http://i.imgur.com/7IdUY.png)
 
