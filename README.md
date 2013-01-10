@@ -1,4 +1,6 @@
 # Capistrano Confirm Branch
+[![Gem Version](https://badge.fury.io/rb/capistrano_confirm_branch.png)](http://badge.fury.io/rb/capistrano_confirm_branch)
+
 
 Requires confirmation before switching deployed branches using capistrano.
 
