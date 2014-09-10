@@ -16,5 +16,6 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*"] +
     %w{Rakefile README.md LICENSE}
 
-  s.add_dependency "capistrano"
+  s.add_dependency "capistrano", '~> 3.2.0'
+  s.add_dependency "highline"
 end
