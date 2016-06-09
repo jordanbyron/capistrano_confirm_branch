@@ -2,7 +2,8 @@
 [![Gem Version](https://badge.fury.io/rb/capistrano_confirm_branch.png)](http://badge.fury.io/rb/capistrano_confirm_branch)
 
 
-Requires confirmation before switching deployed branches using capistrano.
+Requires confirmation before switching deployed branches using capistrano and
+warns when deploying with unpushed changes.
 
 ![Confirm Deploy](http://i.imgur.com/7IdUY.png)
 
@@ -22,6 +23,23 @@ gem 'capistrano_confirm_branch'
 
 Then in your `Capfile` add `require 'capistrano/confirm_branch'` and you will be
 asked to confirm changing branches before each deploy.
+
+
+### Configuration options
+
+By default `capistrano_confirm_branch` will warn when changing branches AND when
+there are unpushed git commits. You can opt out of either warning by setting the
+following options:
+
+```ruby
+# config/deploy.rb
+
+# Turn off unpushed git commit check
+set :check_unpushed_commits_before_deploy, false
+
+# Turn off branch change warning
+set :confirm_branch_before_deploy, false
+```
 
 ## Bonus
 
