@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Capistrano::ConfirmBranch::VERSION
   s.authors     = ["Jordan Byron"]
   s.email       = ["jordan.byron@gmail.com"]
-  s.homepage    = "https://github.com/elm-city-craftworks/capistrano_confirm_branch"
+  s.homepage    = "https://github.com/madriska/capistrano_confirm_branch"
   s.summary     = "Requires confirmation before switching deployed branches"
   s.description = "Requires confirmation before switching deployed branches"
 
